@@ -29,6 +29,11 @@ console.log(type);
 console.log(freeMemory);
 console.log(totalMemory);
 
+// Installing external modules in Node.js
+// npm install <module-name> or npm i <module-name>
+const ospath = require("ospath");
+console.log(ospath.home());
+
 // We can create a web server in Node.js using the http module.
 // A web server is a software that listens for incoming requests over the HTTP protocol and sends back responses.
 
