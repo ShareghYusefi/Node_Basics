@@ -10,7 +10,14 @@
 // console.log(module);
 
 // importing logger module
-const logger = require("./logger");
+const Logger = require("./logger");
+// create a logger object
+var loggerInstance = new Logger();
+// listen for the messageLogged event
+loggerInstance.on("messageLogged", (arg) => {
+  console.log("2. Listener called", arg);
+});
+
 // ./filename: current directory
 // ../filename: parent directory
 // /filename: root directory of the file system
@@ -53,7 +60,7 @@ const http = require("http");
 // The callback function takes two arguments, request(req) and response(res).
 const server = http.createServer((req, res) => {
   // log a message to the console
-  logger("Someone visisted our server");
+  loggerInstance.logger("Someone visited our server");
   // write a response to the client
   res.writeHead(200, { "Content-Type": "application/json" });
   res.write('{"message": "Hello World"}');
