@@ -7,8 +7,13 @@
 // Modules are like libraries in Node.js. They are reusable blocks of code whose existence does not impact the global scope.
 
 // Any file in Node.js is considered a module, giving us thwe ability to import and export code between files/modules.
-// import Module from "node:module";
-// console.log(Module);
+// console.log(module);
+
+// importing logger module
+const logger = require("./logger");
+// ./filename: current directory
+// ../filename: parent directory
+// /filename: root directory of the file system
 
 // var, let, and const are used to declare variables in Node.js.
 
@@ -30,6 +35,9 @@ console.log(freeMemory);
 console.log(totalMemory);
 
 // Installing external modules in Node.js
+// To install packages we need to setup a package.json (npm init)
+// Json data is a collection of key-value pairs in string format.
+
 // npm install <module-name> or npm i <module-name>
 const ospath = require("ospath");
 console.log(ospath.home());
@@ -44,6 +52,8 @@ const http = require("http");
 // createServer takes a callback function as an argument.
 // The callback function takes two arguments, request(req) and response(res).
 const server = http.createServer((req, res) => {
+  // log a message to the console
+  logger("Someone visisted our server");
   // write a response to the client
   res.writeHead(200, { "Content-Type": "application/json" });
   res.write('{"message": "Hello World"}');

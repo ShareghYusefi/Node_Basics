@@ -1,4 +1,21 @@
 {
+  "name": "node_basics",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShareghYusefi/Node_Basics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShareghYusefi/Node_Basics/issues"
+  },
+  "homepage": "https://github.com/ShareghYusefi/Node_Basics#readme",
+  "description": "This project is for learning Node.js basics.",
   "dependencies": {
     "ospath": "^1.2.2"
   }
