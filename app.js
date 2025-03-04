@@ -45,7 +45,8 @@ console.log(totalMemory);
 // To install packages we need to setup a package.json (npm init)
 // Json data is a collection of key-value pairs in string format.
 
-// npm install <module-name> or npm i <module-name>
+// npm install <module-name>
+// npm uninstall <module-name>
 const ospath = require("ospath");
 console.log(ospath.home());
 
@@ -70,3 +71,12 @@ const server = http.createServer((req, res) => {
 server.listen(8000, () => {
   console.log("Server is running on port 8000");
 });
+
+// Semantic Versioning
+// Major.Minor.Patch
+// Caret(^): ^1.2.3 means install the latest version of 1.x.x
+// Tilde(~): ~1.2.3 means install the latest version of 1.2.x
+
+// How can we update packages?
+// "npm outdated" will show you which packages are outdated.
+// "npm update" will update all packages to the latest version.
